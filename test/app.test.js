@@ -29,21 +29,23 @@ test('GET /health returns 200 and status UP', async () => {
   assert.ok(data.timestamp);
 });
 
-test('GET /api/info returns microservice metadata', async () => {
+test('GET /api/info returns portfolio metadata', async () => {
   const res = await fetch(`${baseUrl}/api/info`);
   assert.strictEqual(res.status, 200);
 
   const data = await res.json();
-  assert.strictEqual(data.name, 'Jenkins CI/CD Microservice');
-  assert.ok(data.version);
+  assert.strictEqual(data.role, 'DevOps Engineer');
+  assert.ok(data.name.includes('SUDARSHNA CHAND'));
 });
 
-test('GET / returns HTML dashboard with 200 status', async () => {
+test('GET / returns HTML dashboard with resume details', async () => {
   const res = await fetch(`${baseUrl}/`);
   assert.strictEqual(res.status, 200);
   assert.match(res.headers.get('content-type'), /text\/html/);
 
   const html = await res.text();
+  assert.ok(html.includes('SUDARSHNA CHAND M S'));
+  assert.ok(html.includes('DevOps Engineer'));
   assert.ok(html.includes('Jenkins CI/CD Automation'));
   assert.ok(html.includes('DEPLOYED &amp; HEALTHY'));
 });
