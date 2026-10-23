@@ -1,6 +1,6 @@
 {
   "name": "jenkins-demo-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Web App with Jenkins CI/CD Pipeline and Docker Deployment",
   "main": "src/app.js",
   "scripts": {
