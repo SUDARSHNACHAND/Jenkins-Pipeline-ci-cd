@@ -541,10 +541,6 @@ app.get('/', (req, res) => {
 
       <div class="contact-grid">
         <div class="contact-item">
-          <span>📞</span>
-          <a href="tel:+917598411449">+91 7598411449</a>
-        </div>
-        <div class="contact-item">
           <span>✉️</span>
           <a href="mailto:sudarshanachand007@gmail.com">sudarshanachand007@gmail.com</a>
         </div>
