@@ -84,7 +84,7 @@ docker logs -f jenkins-ci
 ---
 
 ### Step 3: Unlock and Configure Jenkins
-1. Open your browser and navigate to: **[http://localhost:8080](http://localhost:8080)**.
+1. Open your browser and navigate to: **[http://localhost:8085](http://localhost:8085)**.
 2. Retrieve the initial administrator password:
    ```powershell
    docker exec jenkins-ci cat /var/jenkins_home/secrets/initialAdminPassword
