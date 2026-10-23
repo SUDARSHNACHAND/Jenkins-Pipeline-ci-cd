@@ -8,8 +8,8 @@ pipeline {
         disableConcurrentBuilds()
         // Abort pipeline if running longer than 15 minutes
         timeout(time: 15, unit: 'MINUTES')
-        // Enable colored console output
-        ansiColor('xterm')
+        // Enable timestamps in console output
+        timestamps()
     }
 
     environment {
