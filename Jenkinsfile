@@ -137,7 +137,7 @@ pipeline {
                     if (isUnix()) {
                         sh """
                             echo "Querying healthcheck endpoint on port ${HOST_PORT}..."
-                            curl -fsS http://localhost:${HOST_PORT}/health || curl -fsS http://127.0.0.1:${HOST_PORT}/health
+                            curl -fsS http://host.docker.internal:${HOST_PORT}/health || curl -fsS http://localhost:${HOST_PORT}/health || curl -fsS http://127.0.0.1:${HOST_PORT}/health
                         """
                     } else {
                         bat """
